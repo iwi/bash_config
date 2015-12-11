@@ -1,1 +1,1 @@
-export PATH=$PATH:/home/iwi/software/pig-0.15.0/bin
+source '/home/iwi/.bashrc' # This is used by tmux to get .bashrc

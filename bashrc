@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# based on ags config
+export TERM=screen-256color
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -93,6 +96,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias dm='docker-machine'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
