@@ -122,4 +122,8 @@ fi
 # currently nothing in .bash_profile, uncommenting it sources it
 # source ~/.bash_profile
 
+# alias to clean up the dangling docker images
+alias drmid="docker images -qf 'dangling=true' | xargs
+docker rmi"
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
