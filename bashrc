@@ -123,7 +123,6 @@ fi
 # source ~/.bash_profile
 
 # alias to clean up the dangling docker images
-alias drmid="docker images -qf 'dangling=true' | xargs
-docker rmi"
+alias drmid="docker images -qf 'dangling=true' | xargs docker rmi"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
