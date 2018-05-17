@@ -4,6 +4,9 @@
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+# uncomment to start tmux automatically
+# [[ $- != *i* ]] && return
+# [[ -z "$TMUX" ]] && exec tmux
 
 # based on ags config
 export TERM=screen-256color
@@ -118,11 +121,23 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
 # currently nothing in .bash_profile, uncommenting it sources it
 # source ~/.bash_profile
 
 # alias to clean up the dangling docker images
 alias drmid="docker images -qf 'dangling=true' | xargs docker rmi"
+alias dc="docker-compose"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+# Rust path
+
+export PATH="$PATH:~/.cargo/bin"
+export export PASSWORD_STORE_DIR=~/meus/mots/
+
+# alias for nice outputs 
+alias ls=exa
+alias cat=bat
+
+
