@@ -139,5 +139,7 @@ export export PASSWORD_STORE_DIR=~/meus/mots/
 # alias for nice outputs 
 alias ls=exa
 alias cat=bat
-
+alias pasifae='PASSWORD_STORE_DIR=/keybase/team/pasifae/.pasifae-store pass'
+alias mobit='PASSWORD_STORE_DIR=~/.mobit-store pass'
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
